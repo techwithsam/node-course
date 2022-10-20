@@ -2,18 +2,17 @@ const path = require("path");
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const expressHbs = require("express-handlebars");
-// import { create } from "express-handlebars";
+// const expressHbs = require("express-handlebars");
 
 const app = express();
-const hbs = expressHbs.create({ 
-  layoutsDir: "views/layouts/",
-  defaultLayout: "main-layout",
-  extname: "hbs",
-});
+// const hbs = expressHbs.create({
+//   layoutsDir: "views/layouts/",
+//   defaultLayout: "main-layout",
+//   extname: "hbs",
+// });
 
-app.engine("hbs", hbs.engine);
-app.set("view engine", "hbs");
+// app.engine("hbs", hbs.engine);
+app.set("view engine", "ejs");
 app.set("views", "views");
 
 const adminData = require("./routes/admin");
